@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>CSS Grids</title>
+	
+	<style>
+		/* Here we used a grid column to strecth the layout*/
+		.item1 { grid-column: header; }
+		.item2 { grid-column: menu; } 
+		.item3 { 
+			grid-column: hero; 
+			grid-row: 2 / span 40;} 
+		.item4 { 
+			grid-column: main;
+			grid-row: span 26;}
+		.item5 { 
+			grid-column: right;
+			grid-row: span 26;}
+		.item6 { 
+			grid-column: image;
+			grid-row: span 13}
+		.item7 { 
+			grid-column: extra; 
+			grid-row: span 13;}
+		
+		.item8 { grid-column: banner; }
+		
+		.grid-container > div {
+			background-color: skyblue;
+			text-align: center;
+			padding: 20px;
+			font-size: 30px;
+		}
+		
+		/*This class will apply the css grid*/
+		/* Here we apply the grid using the grid-template-area*/
+		
+		.grid-container {
+			display: grid;
+			grid-template-areas: 
+				'header header menu menu menu menu'
+				'hero hero hero hero hero hero'
+				'main main main right image image'
+				'main main main right extra extra'
+				'banner banner banner banner banner banner';
+			
+			grid-gap: 10px;
+			background-color: teal;
+			padding: 10px;
+		}
+		
+		
+		.grid-container {
+			display: grid;
+			grid-gap: 10px;
+			background-color: black;
+			padding: 10px;
+		}
+	</style>
+	
+	
+	
+</head>
+	
+<body>
+	
+	<div class="grid-container">
+		<div class="item1">Header</div>
+		<div class="item2">Menu</div>
+		<div class="item3">Hero</div>
+		<div class="item4">Main</div>
+		<div class="item5">Right</div>
+		<div class="item6">Image</div>
+		<div class="item7">Extra</div>
+		<div class="item8">Banner</div>
+	</div>
+	
+</body>
+</html>
